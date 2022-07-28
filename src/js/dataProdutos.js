@@ -33,5 +33,27 @@ const produtos = [
         secao: 'Laticínio',
         categoria: 'Leite',
         img: './src/img/leite.png'
+    },
+    {
+        nome: 'Torta de maça com aveia',
+        preco: 5,
+        secao: 'Panificadora',
+        categoria: 'Leite',
+        img: './src/img/tortaMaca.png'
+    },
+    {
+        nome: 'Torta de maça',
+        preco: 5,
+        secao: 'Panificadora',
+        categoria: 'Leite',
+        img: './src/img/tortaMaca.png'
+    },
+    {
+        nome: 'Mousse de morango',
+        preco: 6,
+        secao: 'Panificadora',
+        categoria: 'Leite',
+        img: './src/img/tortaMorango.png'
     }
+    
 ]
