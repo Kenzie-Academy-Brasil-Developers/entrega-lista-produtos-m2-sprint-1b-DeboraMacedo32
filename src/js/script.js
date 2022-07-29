@@ -51,7 +51,7 @@ listarProdutos(produtos, produtosLista);
 
 
 function criarCardProduto(produto){
- console.log(produto.nome)
+ 
  let nomeCard      = produto.nome
  let precoCard     = produto.preco
  let secaoCard     = produto.secao
@@ -88,3 +88,28 @@ function somaProduto(){
     document.querySelector(".priceContainer span").innerText = `R$ ${valor.toFixed(2)}`
 }
   somaProduto();
+
+
+  let inputBusca = document.querySelector(".containerBuscaPorNome input");
+  let btnBusca   = document.querySelector(".containerBuscaPorNome button");
+
+  btnBusca.addEventListener("click", function(){
+    let pesquisaUsuario = inputBusca.value
+    let resultadoBusca  = busca(pesquisaUsuario)
+
+    listarProdutos(resultadoBusca, produtosLista)
+
+  })
+
+  function busca(valorPesquisa){
+    let resultBusca = []
+
+    for(let i =0; i< produtos.length;i++){
+      let pesquisa = valorPesquisa.toLowerCase()
+      let nomeProduto = produtos[i].nome.toLowerCase()
+        if(nomeProduto.includes(pesquisa)){
+          resultBusca.push(produtos[i])
+        }
+    }
+    return resultBusca;
+  }
